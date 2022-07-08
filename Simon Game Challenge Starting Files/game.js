@@ -9,6 +9,7 @@ function newSequence() {
   let newColor = colorSet[Math.floor(Math.random() * 4)];
   let btnSelection = $(`#${newColor}`).toggleClass("pressed");
   setTimeout(() => btnSelection.toggleClass("pressed"), 100);
+  soundPlay(newColor);
   colorSequence.push(newColor);
 }
 function gameOver() {
